@@ -1,5 +1,11 @@
 package com.tjj.chapter10;
 
+/**
+ * @description: 18.1 (1、3) 使用FilenameFilter筛选文件打开，并计算大小总和
+ * @author: tangjunjian
+ * @create: 2018-07-10 14:44
+ **/
+
 import com.bruceeckel.tools.P;
 
 import java.io.File;

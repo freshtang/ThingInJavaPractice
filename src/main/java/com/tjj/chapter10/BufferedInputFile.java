@@ -1,5 +1,11 @@
 package com.tjj.chapter10;
 
+/**
+ * @description: 18.6
+ * @author: tangjunjian
+ * @create: 2018-07-12 15:44
+ **/
+
 import java.io.*;
 
 public class BufferedInputFile {
@@ -18,6 +24,6 @@ public class BufferedInputFile {
     }
     public static void main(String[] args)
             throws IOException {
-        System.out.print(read("BufferedInputFile.java"));
+        System.out.print(read("test.txt"));
     }
 }

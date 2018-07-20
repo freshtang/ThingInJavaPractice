@@ -1,5 +1,11 @@
 package com.tjj.chapter10;
 
+/**
+ * @description: 18.6 (15)利用DataOutputStream、DataInputStream准确存储和读取各个值
+ * @author: tangjunjian
+ * @create: 2018-07-13 9:32
+ **/
+
 import java.io.*;
 
 public class StoringAndRecoveringData {

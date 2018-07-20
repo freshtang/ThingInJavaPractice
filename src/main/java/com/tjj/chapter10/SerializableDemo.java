@@ -1,5 +1,11 @@
 package com.tjj.chapter10;
 
+/**
+ * @description: 18.12 实现序列化
+ * @author: tangjunjian
+ * @create: 2018-07-12 15:44
+ **/
+
 import java.io.*;
 import java.util.Random;
 import static net.mindview.util.Print.*;

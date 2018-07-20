@@ -1,9 +1,10 @@
 package com.tjj.chapter10;
 
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by Fernflower decompiler)
-//
+/**
+ * @description: 18.1 (5、3) 用正则表达式代替固定扩展名
+ * @author: tangjunjian
+ * @create: 2018-07-10 14:34
+ **/
 
 import net.mindview.util.Directory;
 

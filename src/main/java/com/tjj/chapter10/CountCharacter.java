@@ -1,5 +1,10 @@
 package com.tjj.chapter10;
 
+/**
+ * @description: 18.6 (17)统计字母出现的次数
+ * @author: tangjunjian
+ * @create: 2018-07-13 16:44
+ **/
 
 import net.mindview.util.TextFile;
 import net.mindview.util.TextFile.*;
@@ -20,6 +25,11 @@ public class CountCharacter {
             } else {
                 map.put(c, 1);
             }
+        }
+
+        for (Character c : map.keySet()) {
+            Integer count = map.get(c);//得到每个key多对用value的值
+            System.out.println(c + " " + count);
         }
     }
 }

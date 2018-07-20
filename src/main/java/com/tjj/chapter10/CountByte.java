@@ -1,5 +1,11 @@
 package com.tjj.chapter10;
 
+/**
+ * @description: 18.7 (19)统计字节出现的次数
+ * @author: tangjunjian
+ * @create: 2018-07-13 16:54
+ **/
+
 import net.mindview.util.BinaryFile;
 
 import java.io.IOException;
@@ -19,6 +25,11 @@ public class CountByte {
                 } else {
                     map.put(c, 1);
                 }
+            }
+
+            for (Byte by : map.keySet()) {
+                Integer count = map.get(by);//得到每个key多对用value的值
+                System.out.println(by + " " + count);
             }
         } catch (IOException e) {
             System.out.println("error");

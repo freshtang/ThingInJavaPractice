@@ -1,5 +1,11 @@
 package com.tjj.chapter10;
 
+/**
+ * @description: 18.6 (7、8、9、12) 利用LinkedList反向打印，大写打印
+ * @author: tangjunjian
+ * @create: 2018-07-9 15:44
+ **/
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;

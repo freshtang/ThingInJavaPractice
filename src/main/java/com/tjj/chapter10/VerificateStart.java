@@ -1,5 +1,11 @@
 package com.tjj.chapter10;
 
+/**
+ * @description: 18.7 (20)统计字节出现的次数
+ * @author: tangjunjian
+ * @create: 2018-07-13 17:12
+ **/
+
 import net.mindview.util.BinaryFile;
 import net.mindview.util.Directory;
 

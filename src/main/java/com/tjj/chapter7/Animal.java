@@ -1,24 +1,32 @@
 package com.tjj.chapter7;
 
-interface Rodent {
-    void eat ();
+/**
+ * @description: 7.7 (16) （17） 8.2(all)  9(1)向上转型
+ * @author: tangjunjian
+ * @create: 2018-07-13 10:19
+ **/
+
+class Rodent {
+    void eat () {
+        System.out.println("eat from Rodent");
+    };
 }
 
-class Mouse implements Rodent {
+class Mouse extends Rodent {
     public void eat () {
         System.out.println("Mouse is eating");
     }
 }
 
 
-class Gerbil implements Rodent {
+class Gerbil extends Rodent {
     public void eat () {
         System.out.println("Gerbil is eating");
     }
 }
 
 
-class Hamster implements Rodent {
+class Hamster extends Rodent {
     public void eat () {
         System.out.println("Hamster is eating");
     }

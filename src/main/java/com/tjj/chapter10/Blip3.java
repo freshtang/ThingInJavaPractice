@@ -1,5 +1,11 @@
 package com.tjj.chapter10;
 
+/**
+ * @description: 18.12 （29）注释writeExternal的write看下结果
+ * @author: tangjunjian
+ * @create: 2018-07-12 17:44
+ **/
+
 //: io/Blip3.java
 // Reconstructing an externalizable object.
 import java.io.*;
