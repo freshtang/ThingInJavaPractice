@@ -1,5 +1,11 @@
 package com.tjj.chapter11;
 
+/**
+ * @description: 14.6 (17)修改正则表达式
+ * @author: tangjunjian
+ * @create: 2018-07-14 09:29
+ **/
+
 import java.lang.reflect.*;
 import java.util.regex.*;
 import static net.mindview.util.Print.*;
@@ -23,25 +29,28 @@ public class ShowMethods {
             Method[] methods = c.getMethods();
             Constructor[] ctors = c.getConstructors();
             if(args.length == 1) {
-                for(Method method : methods)
-                    print(
-                            p.matcher(method.toString()).replaceAll(""));
-                for(Constructor ctor : ctors)
+                for(Method method : methods) {
+                    print(p.matcher(method.toString()).replaceAll(""));
+                }
+                for(Constructor ctor : ctors) {
                     print(p.matcher(ctor.toString()).replaceAll(""));
+                }
                 lines = methods.length + ctors.length;
             } else {
-                for(Method method : methods)
-                    if(method.toString().indexOf(args[1]) != -1) {
+                for(Method method : methods) {
+                    if (method.toString().indexOf(args[1]) != -1) {
                         print(
                                 p.matcher(method.toString()).replaceAll(""));
                         lines++;
                     }
-                for(Constructor ctor : ctors)
-                    if(ctor.toString().indexOf(args[1]) != -1) {
+                }
+                for(Constructor ctor : ctors) {
+                    if (ctor.toString().indexOf(args[1]) != -1) {
                         print(p.matcher(
                                 ctor.toString()).replaceAll(""));
                         lines++;
                     }
+                }
             }
         } catch(ClassNotFoundException e) {
             print("No such class: " + e);

@@ -1,5 +1,11 @@
 package com.tjj.chapter14;
 
+/**
+ * @description: 21.4 （18、19）用interrupt（）终结任务
+ * @author: tangjunjian
+ * @create: 2018-07-31 17:03
+ **/
+
 import java.util.concurrent.*;
 import java.util.*;
 import static net.mindview.util.Print.*;

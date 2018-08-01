@@ -1,5 +1,11 @@
 package com.tjj.chapter14;
 
+/**
+ * @description: 21.5 （21）notifyAll（）跟wait（）的使用
+ * @author: tangjunjian
+ * @create: 2018-07-31 16:03
+ **/
+
 import java.util.concurrent.*;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
@@ -78,7 +84,8 @@ public class WaxOMatic {
         exec.execute(new Run1(c));
         exec.execute(new Run2(c));
 
-        TimeUnit.SECONDS.sleep(2); // Run for a while...
+        TimeUnit.SECONDS.sleep(2);
+        // Run for a while...
         exec.shutdownNow(); // Interrupt all tasks
     }
 }

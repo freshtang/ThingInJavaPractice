@@ -1,5 +1,11 @@
 package com.tjj.chapter14;
 
+/**
+ * @description: 21.5 （28）用队列代替管道
+ * @author: tangjunjian
+ * @create: 2018-07-31 15:03
+ **/
+
 import java.util.concurrent.*;
 import java.io.*;
 import java.util.*;

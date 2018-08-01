@@ -1,5 +1,11 @@
 package com.tjj.chapter14;
 
+/**
+ * @description: 21.9 （39）用AtomicInteger代替int，并使用lock
+ * @author: tangjunjian
+ * @create: 2018-08-01 14:09
+ **/
+
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.*;
 import java.util.*;
@@ -16,8 +22,9 @@ public class FastSimulation {
     static class Evolver implements Runnable {
         public synchronized void setValue(AtomicInteger girdLocation, int newV) {
             int temp = newV;
-            if(rand.nextBoolean()) // Yield half the time
+            if(rand.nextBoolean())
                 Thread.yield();
+            print("Old value changed to " + newV);
             girdLocation.set(newV);
         }
 
@@ -34,15 +41,16 @@ public class FastSimulation {
                     // Perform some kind of modeling calculation:
                     int newvalue = oldvalue +
                             GRID[previous][i].get() + GRID[next][i].get();
-                    newvalue /= 3; // Average the three values
-                    setValue(GRID[element][i], newvalue);
-                    /*if(!GRID[element][i]
+                    // Average the three values
+                    newvalue /= 3;
+//                    setValue(GRID[element][i], newvalue);
+                    if(!GRID[element][i]
                             .compareAndSet(oldvalue, newvalue)) {
                         // Policy here to deal with failure. Here, we
                         // just report it and ignore it; our model
                         // will eventually deal with it.
                         print("Old value changed from " + oldvalue);
-                    }*/
+                    }
 
                 }
             }

@@ -1,5 +1,11 @@
 package com.tjj.chapter14;
 
+/**
+ * @description: 21.9(40)  创建一个加读写锁的map；
+ * @author: tangjunjian
+ * @create: 2018-08-01 14:09
+ **/
+
 import java.util.concurrent.*;
 import java.util.concurrent.locks.*;
 import java.util.*;

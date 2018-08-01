@@ -1,5 +1,11 @@
 package com.tjj.chapter11;
 
+/**
+ * @description: 14.2 （3）Rhomboid向上转型为shapes，然后向下转型为Circle，看发生什么 (4、5、6、8、9)
+ * @author: tangjunjian
+ * @create: 2018-07-18 11:38
+ **/
+
 import java.lang.reflect.Field;
 import java.util.*;
 
@@ -15,6 +21,10 @@ class Circle extends Shape {
 
 class Square extends Shape {
     public String toString() { return "Square"; }
+}
+
+class Rhomboid extends Shape {
+    public String toString() { return "Rhomboid"; }
 }
 
 class Triangle extends Shape {
@@ -41,6 +51,13 @@ public class Shapes {
         }
     }
     public static void main(String[] args) {
+//        Shape s = new Rhomboid();
+//        System.out.println(s instanceof Circle); // false
+//        System.out.println(s instanceof Shape);  // true
+//        System.out.println(s instanceof Rhomboid); // true
+//        Circle circle = (Circle)s;
+        // Exception in thread "main" java.lang.ClassCastException: com.tjj.chapter11.Rhomboid cannot be cast to com.tjj.chapter11.Circle
+
         List<Shape> shapeList = Arrays.asList(
                 new Circle(), new Square(), new Triangle()
         );

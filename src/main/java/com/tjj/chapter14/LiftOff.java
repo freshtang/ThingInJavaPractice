@@ -3,7 +3,7 @@ package com.tjj.chapter14;
 import java.util.concurrent.Callable;
 
 public class LiftOff implements Callable<String> {
-    protected int countDown = 10; // Default
+    protected int countDown = 10;
     private static int taskCount = 0;
     private final int id = taskCount++;
     public LiftOff() {}

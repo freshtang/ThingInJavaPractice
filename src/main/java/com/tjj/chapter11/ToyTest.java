@@ -1,5 +1,11 @@
 package com.tjj.chapter11;
 
+/**
+ * @description: 14.2 （1、2） 14.6 (19)
+ * @author: tangjunjian
+ * @create: 2018-07-18 17:38
+ **/
+
 import static net.mindview.util.Print.*;
 
 interface HasBatteries {}
@@ -29,13 +35,20 @@ public class ToyTest {
         Class c = null;
         try {
             c = Class.forName("com.tjj.chapter11.FancyToy");
+            Object toy = c.newInstance();
         } catch(ClassNotFoundException e) {
             print("Can't find FancyToy");
             System.exit(1);
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch(InstantiationException e) {
+            print("Cannot instantiate");
+            System.exit(1);
         }
         printInfo(c);
-        for(Class face : c.getInterfaces())
+        for(Class face : c.getInterfaces()) {
             printInfo(face);
+        }
         Class up = c.getSuperclass();
         Object obj = null;
         try {
